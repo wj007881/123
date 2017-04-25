@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>配置信息</title>
+ </head>
+ <link rel="stylesheet" href="css/public.css">
+ <script src="js/jquery-1.12.1.min.js"></script>
+ <script src="layer/layer.js"></script>
+ <style type="text/css">
+	.head{
+	height:38px;
+	background:#F7F7F7;
+	border-bottom:1px solid #E6E6E6;
+}
+.head-contain{
+	width:1200px;
+	margin:0 auto;
+	line-height:38px;
+	color:#666;
+	font-size:14px;
+}
+.head-left{
+	width:498px;
+	height:38px;
+}
+.head-right{
+	width:360px;
+	height:38px;
+}
+.head-left span{
+	float:left;
+	padding:0 10px;
+}
+.head-contain a:hover{
+	color:red;
+}
+.head-right li{
+	float:left;
+	margin:0 10px;
+	position:relative;
+}
+.head-right .icon a{
+	font-size:15px;
+	color:red;
+}
+.head-right .icon i{
+	width:15px;
+	height:20px;
+	display:inline-block;
+	background:url("./img/navbar.png");
+	background-position:-9px -300px;
+	position:absolute;
+	top:10px;
+	left:-20px;
+	animation:app 1s infinite ease-in-out;
+}
+@keyframes app{
+	0%{}
+	25%{transform:rotate(-18deg);}
+	50%{transform:rotate(18deg);}
+	75%{transform:scale(.8);}
+	100%{}
+}
+.login i{
+	width:8px;
+	height:6px;
+	display:inline-block;
+	background:url("./img/navbar.png");
+	vertical-align:middle;
+	background-position:-14px -18px;
+	transition:.5s;
+}
+.login:hover i.rot{
+	transform:rotate(180deg);
+}
+.slide{
+	width:125px;
+	position:absolute;
+	left:-60%;
+	display:none;
+	padding-top:6px;
+	Z-index:100;
+}
+.login:hover .slide{
+	display:block;
+}
+.slide span{
+	width:12px;
+	height:7px;
+	background:url("./img/navbar.png");
+	background-position:-9px -32px;
+	position:absolute;
+	left:30%;
+	top:0px;
+}
+.slide-menu{
+	width:124px;
+	border:1px solid #ececec;
+	background:white;
+}
+.slide-menu a{
+	display:block;
+	text-indent:1em;
+	border-bottom:1px solid #ececec;
+}
+.slide-menu a i{
+	width:20px;
+	height:19px;
+	margin-right:8px;
+}
+ .slide-menu a:nth-child(1) i,.head-left span i:nth-child(1){
+	background-position:-3px -122px;
+}
+.slide-menu a:nth-child(2) i,.head-left span i:nth-child(2){
+	background-position:0 -183px;
+}
+.slide-menu a:nth-child(3) i,.head-left span i:nth-child(3){
+	background-position:-5px -154px;
+}
+ .slide-menu a:nth-child(4) i,.head-left span i:nth-child(4){
+	background-position:-2px -243px;
+}
+.head-left span i:nth-child(5){
+	background-position:-2px -210px;
+}
+.head-left span i:nth-child(6){
+	background-position:-2px -271px;
+}
+
+.head-left span i{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	background:url("./img/navbar.png");
+	margin:0 4px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.nav{
+	width:100%;
+	background:#317EE6;
+	height:40px;
+	margin-top:30px;
+}
+.nav-contain{
+	width:1200px;
+	height:40px;
+	margin:0 auto;
+	font-size:16px;
+	line-height:40px;
+	text-align:center;
+}
+.nav-contain li{
+	height:40px;
+	float:left;
+	width:110px;
+	border-left:1px solid #007ADA;
+}
+.nav-contain a{
+	color:white;
+}
+.nav-contain a:hover{
+	color:red;
+}
+.nav-last{
+	border-right:1px solid #007ADA;
+}
+.select{
+	background:#007ADA;
+}
+.select a{
+	color:red;
+}
+.nav-quanbufenlei{
+	float:left;
+	width:190px;
+	height:41px;
+	border:1px solid white;
+	border-top:none;
+	color:white;
+	margin-right:10px;
+	text-align:left;
+	padding-left:10px;
+}
+.nav-diy{
+	width:110px;
+	height:40px;
+	margin-right:190px;
+	color:#eee;
+	font-size:14px;
+	cursor:pointer
+}
+.nav-diy:hover{
+	color:red;
+}
+.bb li{
+	width:113px;
+	height:113px;
+	float:left;
+	border:1px solid #C6D5E4;
+	background:url('img/zz.png');
+	cursor:pointer;
+}
+.bb{
+	width:700px;
+	margin:30px auto;
+}
+.bb li:nth-child(1){
+	background-position:2px 0;
+}
+.bb li:nth-child(2){
+	background-position:-109px 0;
+}
+.bb li:nth-child(3){
+	background-position:-219px 0;
+}
+.bb li:nth-child(4){
+	background-position:-330px 0;
+}
+.bb li:nth-child(5){
+	background-position:-441px 0;
+}
+.bb li:nth-child(6){
+	background-position:-552px 0;
+}
+.search{
+	width:1200px;
+	height:80px;
+	margin:10px auto;
+}
+.search-center{
+	width:560px;
+	height:80px;
+	text-align:center;
+	line-height:60px;
+	position:relative
+}
+.search-center p{
+	position:absolute;
+	bottom:-16px;
+	left:85px;
+	font-size:14px;
+	cursor:pointer;
+}
+.search-center p:hover{
+	color:red;
+}
+.text{
+	outline:none;
+	width:300px;
+	height:30px;
+	border:7px solid #317EE6;
+	margin-right:90px;
+	font-size:16px;
+	padding-left:5px;
+	color:#666;
+}
+.submit{
+	width:90px;
+	height:44px;
+	border:none;
+	background:#317EE6;
+	position:absolute;
+	right:123px;
+	top:9px;
+	font-size:14px;
+	color:white;
+	cursor:pointer;
+}
+.search-right{
+	width:270px;
+	height:80px;
+}
+.search-right li{
+	width:110px;
+	height:30px;
+	background:#F7F7F7;
+	float:left;
+	margin-top:20px;
+	margin-right:20px;
+	text-align:center;
+	font-size:13px;
+}
+.search-right li:hover{
+	cursor:pointer;
+	color:red;
+}
+.search-right li:nth-child(1) i{
+	width:30px;
+	height:30px;
+	background:url('./img/2.png');
+	display:inline-block;
+	vertical-align:middle;
+	background-position:0 -4px;
+}
+.search-right li:nth-child(2) i{
+	width:20px;
+	height:20px;
+	background:url('./img/navbar.png');
+	margin-top:5px;
+	display:inline-block;
+	vertical-align:middle;
+	background-position:-3px -44px;
+}
+.img2{
+	margin-top:12px;
+}
+.cc{
+	width:100%;
+	height:120px;
+	background:#eee;
+	margin-top:180px;
+}
+.dd{
+	width:800px;
+	margin:0 auto;
+	
+}
+.dd p{
+	height:40px;
+	line-height:40px;
+}
+.dd p a{
+	color:#3891ED;
+	display:inline-block;
+	margin-left:30px;
+}
+.dd p a:hover{
+	color:red;
+}
+.xx{
+	width:800px;
+	margin:30px auto;
+	height:600px;
+}
+.xx li{
+	width:800px;
+	height:140px;
+	border:1px solid #ccc;
+	margin-left:20px;
+	margin-top:10px;
+	padding-left:30px;
+}
+.xx img{
+	margin-top:20px;
+}
+.diceng{
+	width:100%;
+	border-top:1px solid #999;
+	height:50px;
+	margin-top:60px;
+}
+.cen{
+	width:1200px;
+	margin:0 auto;
+}
+.di{
+	width:1200px;
+	margin:0 auto;
+	text-align:center;
+	line-height:40px;
+	color:#999999;
+	font-size:13px;
+}
+.ww{
+	width:1200px;
+	margin:0 auto;
+	height:600px;
+}
+.vv{
+	width:600px;
+	float:right;
+	height:140px;
+	padding-top:8px;
+}
+.vv h2{
+	color:blue;
+}
+.vv dd{
+	width:200px;
+	float:right;
+	margin-right:100px;
+	margin-top:8px;
+	color:#999
+}
+.vv dd lable{
+	margin-left:20px;
+	color:#3891ED;
+	font-size:14px;
+	CURSOR:POINTER;
+}
+.nav{
+	margin-top: 0;
+}
+/*jieshu*/
+ </style>
+ <body>
+	<div class='head'>
+			<div class='head-contain  cl'>
+				<div class='head-left fl '>
+					<span ><a href="">收藏</a></span>
+					<span>分享：
+					<i title='分享到本站'></i>
+					<i title='分享到微博'></i>
+					<i title='分享到QQ'></i>
+					<i title='分享到微信'></i>
+					<i title='分享到淘宝'></i>
+					<i title='分享到樱桃'></i>
+					</span>
+				</div>
+				<div class='head-right fr '>
+					<ul>
+						<li class='icon'>
+							<a href="">
+							<i></i>
+							硬件之家，有内涵的攒机网站！
+							</a>
+						</li>
+						<li class='login'>
+							<a href="">登录</a>
+							<i class='rot'></i>
+							<div class='slide'>
+								<span></span>
+								<div class="slide-menu">
+									<a href="用户登录界面.htm"><i></i>账号登录</a>
+									<a href="用户登录界面.htm"><i></i>微博登录</a>
+									<a href="用户登录界面.htm"><i></i>QQ登录</a>
+									<a href="用户登录界面.htm"><i></i>微信登录</a>
+								</div>
+							</div>
+						</li>
+						<li> <a href="用户注册.htm">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="search cl">
+			<div class="fl">
+				<a href="" class="fl"><img src="img/123.jpg" alt=""width="180px" height="80px"/></a>
+				<a href="" class="fl img2"><img src="img/2.gif" alt=""width="180px" height="50px"/></a>
+			</div>
+			<div class="search-center fl">
+				<input type="text"  class="text" placeholder='搜索信息...'/>
+				<input type="submit" class="submit" value="搜配件"/>
+				<p>热门推荐&nbsp;:&nbsp;&nbsp;13223132131313！</p>
+			</div>
+			<div class="search-right fr">
+				<ul>
+					<li><i></i>用户中心</li>
+					<li><i></i>我的信箱</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="nav-contain">
+				<ul>
+					<div class='nav-quanbufenlei'>
+						全部分类
+					</div>
+					<li ><a href="index.html">首页</a></li>
+					<li class='select'><a href="">配置信息</a></li>
+					<li><a href="zixun.html">配置资讯</a></li>
+					<li class='nav-last'><a href="shequ.html">留言板</a></li>
+					<div class='nav-diy fr' onClick="tc()">
+						开始DIY>>>
+					</div>
+				</ul>
+				 <script type="text/javascript">
+function tc(){ 
+	layer.open({
+    type: 2,
+    title: '提交配置',
+    maxmin: true,
+    area: ['800px', '500px'],
+    content: '表单.htm',
+    end: function(){
+      layer.tips('Hi', '#about', {tips: 1})
+    }
+  });
+	}
+</script>
+			</div>
+		</div>
+		<div class='bb'>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="cc">
+			<div class="dd">
+				<p>品牌:&nbsp;&nbsp;&nbsp;&nbsp;<a href="">AMD</a><a href="">INTEL</a><a href="">不限</a></p>
+				<p>价格:&nbsp;&nbsp;&nbsp;&nbsp;<a href="">0-1000</a><a href="">1000-2000</a><a href="">2000-3000</a><a href="">3000-5000</a><a href="">5000-10000</a><a href="">10000以上</a><a href="">不限</a></p>
+				<p>类型:&nbsp;&nbsp;&nbsp;&nbsp;<a href="">i7</a><a href="">i5</a><a href="">i3</a><a href="">赛扬</a><a href="">奔腾</a><a href="">不限</a></p>
+			</div>
+		</div>
+		<div class="xx">
+			<ul>
+				<li><img src="img/bb.png" alt="" />
+				<div class='vv'>
+					<h2>酷睿i5</h2>
+					<dd>插槽类型:<lable>LGA&nbsp;&nbsp;1151</lable></dd>
+					<dd>核心:<lable>四核心</lable></dd>
+					<dd>线程:<lable>八线程</lable></dd>
+					<dd>主频:<lable>4.2Ghz</lable></dd>
+					<dd>动态加速频率:<lable>4.5GHz</lable></dd>
+					<dd>三级缓存:<lable>8MB</lable></dd>
+				</div></li>
+				<li><img src="img/bb.png" alt="" /><div class='vv'>
+					<h2>酷睿i5</h2>
+					<dd>插槽类型:<lable>LGA&nbsp;&nbsp;1151</lable></dd>
+					<dd>核心:<lable>四核心</lable></dd>
+					<dd>线程:<lable>八线程</lable></dd>
+					<dd>主频:<lable>4.2Ghz</lable></dd>
+					<dd>动态加速频率:<lable>4.5GHz</lable></dd>
+					<dd>三级缓存:<lable>8MB</lable></dd>
+				</div></li>
+				<li><img src="img/bb.png" alt="" /><div class='vv'>
+					<h2>酷睿i5</h2>
+					<dd>插槽类型:<lable>LGA&nbsp;&nbsp;1151</lable></dd>
+					<dd>核心:<lable>四核心</lable></dd>
+					<dd>线程:<lable>八线程</lable></dd>
+					<dd>主频:<lable>4.2Ghz</lable></dd>
+					<dd>动态加速频率:<lable>4.5GHz</lable></dd>
+					<dd>三级缓存:<lable>8MB</lable></dd>
+				</div></li>
+				<li><img src="img/bb.png" alt="" /><div class='vv'>
+					<h2>酷睿i5</h2>
+					<dd>插槽类型:<lable>LGA&nbsp;&nbsp;1151</lable></dd>
+					<dd>核心:<lable>四核心</lable></dd>
+					<dd>线程:<lable>八线程</lable></dd>
+					<dd>主频:<lable>4.2Ghz</lable></dd>
+					<dd>动态加速频率:<lable>4.5GHz</lable></dd>
+					<dd>三级缓存:<lable>8MB</lable></dd>
+				</div></li>
+
+			</ul>
+		</div>
+		<div class='diceng '>
+			<div class='di'>©123456789 硬件之家 版权所有，并保留所有权利</div>
+		</div>
+ </body>
+</html>

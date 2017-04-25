@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>硬件之家</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/public.css">
+ </head>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+ <script src="js/data.js"></script>
+ <script src="js/vue.js"></script>
+ <script src="layer/layer.js"></script>
+ <body>
+	<!-- 头部 -->
+	<div class='head'>
+			<div class='head-contain  cl'>
+				<div class='head-left fl '>
+					<span ><a href="">收藏</a></span>
+					<span>分享：
+					<i title='分享到本站'></i>
+					<i title='分享到微博'></i>
+					<i title='分享到QQ'></i>
+					<i title='分享到微信'></i>
+					<i title='分享到淘宝'></i>
+					<i title='分享到樱桃'></i>
+					</span>
+				</div>
+				<div class='head-right fr '>
+					<ul>
+						<li class='icon'>
+							<a href="">
+							<i></i>
+							硬件之家，有内涵的攒机网站！
+							</a>
+						</li>
+						<li class='login'>
+							<a href="">登录</a>
+							<i class='rot'></i>
+							<div class='slide'>
+								<span></span>
+								<div class="slide-menu">
+									<a href=""><i></i>账号登录</a>
+									<a href=""><i></i>微博登录</a>
+									<a href=""><i></i>QQ登录</a>
+									<a href=""><i></i>微信登录</a>
+								</div>
+							</div>
+						</li>
+						<li> <a href="">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 头部结束 -->
+		<!-- 搜索栏开始 -->
+		<div class="search cl">
+			<div class="fl">
+				<a href="" class="fl"><img src="img/123.jpg" alt=""width="180px" height="80px"/></a>
+				<a href="" class="fl img2"><img src="img/2.gif" alt=""width="180px" height="50px"/></a>
+			</div>
+			<div class="search-center fl">
+				<input type="text"  class="text" placeholder='搜索信息...'/>
+				<input type="submit" class="submit" value="搜配件"/>
+				<p>热门推荐&nbsp;:&nbsp;&nbsp;13223132131313！</p>
+			</div>
+			<div class="search-right fr">
+				<ul>
+					<li><i></i>用户中心</li>
+					<li><i></i>我的信箱</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 搜索栏结束 -->
+		<!-- 导航开始 -->
+		<div class="nav">
+			<div class="nav-contain">
+				<ul>
+					<div class='nav-quanbufenlei'>
+						全部分类
+					</div>
+					<li><a href="index.html">首页</a></li>
+                    <li><a href="peizhixinxi.html">配置信息</a></li>
+					
+					<li class='select'><a href="zixun.html">配置资讯</a></li>
+					<li class='nav-last'><a href="shequ.html">留言板</a></li>
+					<div class='nav-diy fr' onClick="tc()">
+						开始DIY>>>
+					</div>
+				</ul>
+			</div>
+		</div>
+<div class='fl'>
+				<div class='lunbo2 '>
+					<ul class='cl'>
+						<li><img src="img/林志玲.jpg" alt=""width="765px"height="300px" /></li>
+						<li><img src="img/微星.jpg" alt=""width="765px"height="300px" /></li>
+						<li><img src="img/1080.jpg" alt=""width="765px"height="300px" /></li>
+						<li><img src="img/rx5801.jpg" alt=""width="765px"height="300px" /></li>
+						<li><img src="img/1080ti.jpg" alt=""width="765px"height="300px" /></li>
+					</ul>
+				</div>
+				<div class="tuijian1">
+					<div class='tuijian1-top'>
+						<div class='tuijian1-top-left'>
+							今日推荐
+						</div>
+						
+							<div  id='app' >
+						
+                        
+						<ul>
+							<li v-for="item in zixun" >
+                                
+								<div class='phb-1 li'><img src="{{item.imgpath}}" width="50px" height="50px">
+                                    <h>标题:{{item.biaoti}}</h>
+									
+									
+                                   
+                             <p>简略内容:{{item.jian}}</p>
+                             
+                             <div onClick="tc2()">阅读全文</div>
+                          </li>
+                            
+						</ul>
+					</div>
+						</div>
+						
+					
+				</div>
+			</div>
+
+</body>
+<script type="text/javascript">
+				$(function(){
+					var index=0;
+					var index1=0;
+					setInterval(function(){
+						index++;
+						$(".lunbo ul").animate({"marginLeft":-765*index},500,function(){
+							if(index == 4){
+								$(".lunbo ul").css("marginLeft","0");
+								index = 0
+							}
+						});
+					},3800)
+					setInterval(function(){
+						index1++;
+						$(".pic ul").animate({"marginLeft":-520*index1},500,function(){
+							if(index1 == 3){
+								$(".pic ul").css("marginLeft","0");
+								index1 = 0
+							}
+						});
+					},1800)
+				})
+			</script>
+            
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+         zixun:zixun
+        },
+        computed: {
+            total:function(){
+                var total = 0;
+                
+            },
+			
+			
+        }
+    });
+</script>
+ <script type="text/javascript">
+function tc2(){ 
+	layer.open({
+    type: 2,
+    title: '阅读全文',
+    maxmin: true,
+    area: ['800px', '500px'],
+    content: 'rx580.html',
+    
+  });
+	}
+</script>
+<script type="text/javascript">
+function tc(){ 
+	layer.open({
+    type: 2,
+    title: '提交配置',
+    maxmin: true,
+    area: ['800px', '500px'],
+    content: '表单.htm',
+    end: function(){
+      layer.tips('Hi', '#about', {tips: 1})
+    }
+  });
+	}
+</script>
+</html>

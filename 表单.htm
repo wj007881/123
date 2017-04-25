@@ -1,0 +1,269 @@
+﻿<html>
+	<head>
+    <meta charset='utf-8'>
+		<title>15.2  表单输入框内容关联效果</title>
+        <script src="vue.js"></script>
+        <script src="data.js"></script>
+        
+<script language="JavaScript">
+
+function textValue(){
+    if (document.stationform.stationselect.options[0].selected){
+        document.stationform.disc.value = ""
+        document.stationform.price.value = "";}
+              else if (document.stationform.stationselect.options[1].selected)
+    {    document.stationform.disc.value = "1"
+        document.stationform.price.value = 100;}
+    else if (document.stationform.stationselect.options[2].selected)
+    {    document.stationform.disc.value = "1"
+        document.stationform.price.value = 200;}
+    else if (document.stationform.stationselect.options[3].selected)
+    {    document.stationform.disc.value = "1"
+        document.stationform.price.value = 300;}
+    return true;
+    }
+	
+	function textValue1(){
+    if (document.stationform.stationselect1.options[0].selected){
+        document.stationform.disc1.value = ""
+        document.stationform.price1.value = "";}
+              else if (document.stationform.stationselect1.options[1].selected)
+    {    document.stationform.disc1.value = 1
+        document.stationform.price1.value = 100;}
+    else if (document.stationform.stationselect1.options[2].selected)
+    {    document.stationform.disc1.value = 1
+        document.stationform.price1.value = 200;}
+    else if (document.stationform.stationselect1.options[3].selected)
+    {    document.stationform.disc1.value = 1
+        document.stationform.price1.value = 300;}
+    return true;
+    }
+
+function textValue2(){
+    if (document.stationform.stationselect2.options[0].selected){
+        document.stationform.disc2.value = ""
+        document.stationform.price2.value = "";}
+              else if (document.stationform.stationselect2.options[1].selected)
+    {    document.stationform.disc2.value = 1
+        document.stationform.price2.value = 100;}
+    else if (document.stationform.stationselect2.options[2].selected)
+    {    document.stationform.disc2.value = 1
+        document.stationform.price2.value = 200;}
+    else if (document.stationform.stationselect2.options[3].selected)
+    {    document.stationform.disc2.value = 1
+        document.stationform.price2.value = 300;}
+    return true;
+    }
+	
+	function textValue3(){
+    if (document.stationform.stationselect3.options[0].selected){
+        document.stationform.disc3.value = ""
+        document.stationform.price3.value = "";}
+              else if (document.stationform.stationselect3.options[1].selected)
+    {    document.stationform.disc3.value = 1
+        document.stationform.price3.value = 100;}
+    else if (document.stationform.stationselect3.options[2].selected)
+    {    document.stationform.disc3.value = 1
+        document.stationform.price3.value = 200;}
+    else if (document.stationform.stationselect3.options[3].selected)
+    {    document.stationform.disc3.value = 1
+        document.stationform.price3.value = 300;}
+    return true;
+    }
+	
+	function textValue4(){
+    if (document.stationform.stationselect4.options[0].selected){
+        document.stationform.disc4.value = ""
+        document.stationform.price4.value = "";}
+              else if (document.stationform.stationselect4.options[1].selected)
+    {    document.stationform.disc4.value = 1
+        document.stationform.price4.value = 100;}
+    else if (document.stationform.stationselect4.options[2].selected)
+    {    document.stationform.disc4.value = 1
+        document.stationform.price4.value = 200;}
+    else if (document.stationform.stationselect4.options[3].selected)
+    {    document.stationform.disc4.value = 1
+        document.stationform.price4.value = 300;}
+    return true;
+    }
+	
+	function textValue5(){
+    if (document.stationform.stationselect5.options[0].selected){
+        document.stationform.disc5.value = ""
+        document.stationform.price5.value = "";}
+              else if (document.stationform.stationselect5.options[1].selected)
+    {    document.stationform.disc5.value = 1
+        document.stationform.price5.value = 100;}
+    else if (document.stationform.stationselect4.options[2].selected)
+    {    document.stationform.disc5.value = 1
+        document.stationform.price5.value = 200;}
+    else if (document.stationform.stationselect4.options[3].selected)
+    {    document.stationform.disc5.value = 1
+        document.stationform.price5.value = 300;}
+    return true;
+    }
+	
+function asd(){
+		var zong=Number(document.stationform.price.value)*Number(document.stationform.disc.value)+Number(document.stationform.price1.value)*Number(document.stationform.disc1.value)+Number(document.stationform.price2.value)*Number(document.stationform.disc2.value)+Number(document.stationform.price3.value)*Number(document.stationform.disc3.value)+Number(document.stationform.price4.value)*Number(document.stationform.disc4.value)+Number(document.stationform.price5.value)*Number(document.stationform.disc5.value);
+		var shu=Number(document.stationform.disc.value)+Number(document.stationform.disc1.value)+Number(document.stationform.disc2.value)+Number(document.stationform.disc3.value)+Number(document.stationform.disc4.value)+Number(document.stationform.disc5.value)
+	alert('价格'+zong+'总数量'+shu)
+    }
+	
+function tj(){
+		var x=document.getElementById("form");
+		var newitem={};
+for (var i=0;i<x.length;i+=1)
+{
+	if(i=1){
+document.write('cpu '+x.elements[i].value);
+document.write("<br>");
+if(i=4){
+	document.write('gpu '+x.elements[i].value);
+	document.write("<br>");
+	if(i=7){
+	document.write('内存 '+x.elements[i].value);
+	document.write("<br>");
+	if(i=10){
+	document.write('机箱 '+x.elements[i].value);
+	document.write("<br>");
+	if(i=13){
+	document.write('电源 '+x.elements[i].value);
+	document.write("<br>");
+	if(i=16){
+	document.write('散热器 '+x.elements[i].value);
+	document.write("<br>");
+	if(i=19){
+	document.write('主板 '+x.elements[i].value);
+	document.write("<br>");
+	}
+	else{
+		
+		}
+	}}}}}}
+
+}
+		
+		}
+</script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+         items:data
+        },
+        computed: {
+           
+            },
+			
+			
+        
+    });
+	
+</script>
+	</head>
+	<body>
+<div id="app">
+<form name="stationform" id="form">
+  <table align="center">
+    <TBODY> 
+    <tr><td><input  disabled value="配置选择"></input></td></tr>
+    <tr>
+      <td><select   name="stationselect" onChange="textValue()" id="sel" >
+        <option>选择你想要的CPU</option>
+        <option>Intel 酷睿I3 6100 </option>
+        <option>Intel 酷睿I5 7500 </option>
+        <option>Intel I7 7700X</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price" disabled></input>
+
+       数量
+
+      <input type="number" name="disc"  ></input> </td>
+    </tr>
+    
+     <tr>
+      <td><select   name="stationselect1" onChange="textValue1()" id="sel" >
+        <option>选择你想要的GPU</option>
+        <option>GTX1050</option>
+        <option>GTX1060</option>
+        <option>GTX1070</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price1" disabled></input>
+
+       数量
+
+      <input type="number" name="disc1"  ></input> </td>
+    </tr>
+    
+    <tr>
+      <td><select   name="stationselect2" onChange="textValue2()" id="sel" >
+        <option>选择你想要的内存</option>
+        <option>金士顿2G DDR3</option>
+        <option>金士顿4GB DDR3</option>
+        <option>海盗船铂金32G DDR4</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price2" disabled></input>
+
+       数量
+
+      <input type="number" name="disc2"  ></input> </td>
+    </tr>
+    
+    <tr>
+      <td><select   name="stationselect3" onChange="textValue3()" id="sel" >
+        <option>选择你想要的机箱</option>
+        <option>先马黑洞3</option>
+        <option>游戏悍将核武器9</option>
+        <option>海盗船780T全塔</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price3" disabled></input>
+
+       数量
+
+      <input type="number" name="disc3"  ></input> </td>
+    </tr>
+    
+    <tr>
+      <td><select   name="stationselect4" onChange="textValue4()" id="sel" >
+        <option>选择你想要的电源</option>
+        <option>游戏悍将刀锋50 AK400</option>
+        <option>游戏悍将霸道6 R550</option>
+        <option>海盗船RM750X全模组</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price4" disabled></input>
+
+       数量
+
+      <input type="number" name="disc4"  ></input> </td>
+    </tr>
+    
+    <tr>
+      <td><select   name="stationselect5" onChange="textValue5()" id="sel" >
+        <option>选择你想要的散热器</option>
+        <option>九州风神ALTA 200</option>
+        <option>九州风神船长240水冷散热器</option>
+        <option>Tt 零度水冷装备（Pacific RL240）</option>
+      </select> </td>
+      <td>价格（元）
+      <input  name="price5" disabled ></input>
+
+       数量
+
+      <input type="number" name="disc5"  ></input> </td>
+    </tr>
+    
+    <tr>
+      <td><div onClick="asd()" style="background-color:#0CF">点击此处计算你选择的配置价格</div> </td>
+      <td><div onClick="tj()" style="background-color:#00F">点击此处提交你选择的配置</div> </td>
+    </tr>
+</TBODY>
+  </table>
+</form>
+</div>
+</body>
+</html>
