@@ -1,0 +1,31 @@
+.cl:after{
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.cl{
+	zoom:1; /* for IE6 IE7 */
+}
+*{
+	margin:0;
+	padding:0;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.bd{
+	border:1px solid red;
+}
+a{
+	text-decoration:none;
+	color:#666;
+}
+li{
+	list-style:none;
+}
